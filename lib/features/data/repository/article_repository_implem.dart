@@ -16,7 +16,7 @@ class ArticleRepositoryImplem implements ArticleRepository {
   ArticleRepositoryImplem(this._newsApiService);
 
   @override
-  Future<DataState<List<ArticleModel>>> getArticles() async {
+  Future<DataState<List<ArticleModel>>> getNewsArticles() async {
     try {
       final HttpResponse = await _newsApiService.getNewsArticles(
         apiKey: dotenv.env['NEWSAPI_key'],
